@@ -1,0 +1,5 @@
+plugins:
+  - jekyll-feed
+title: Remote Uploader To Dropbox
+description: Upload files from any URL To Dropbox
+author: save2dropbox
