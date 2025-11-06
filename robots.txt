@@ -1,7 +1,9 @@
 User-agent: *
-Allow: /index.html
-Allow: /dropbox.png
-Allow: /
-Sitemap: https://save2dropbox.github.io/sitemap.xml
-Disallow: /README.md
-Disallow: /404.html
+Allow: index.html
+Allow: save2.html
+Allow: dropbox.png
+Allow: sitemap.xml
+Allow: Sitemap: https://save2dropbox.github.io/sitemap.xml
+Disallow: README.md
+Disallow: 404.html
+Disallow: index1.html
