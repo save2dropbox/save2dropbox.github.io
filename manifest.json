@@ -1,0 +1,21 @@
+{
+  "name": "Save2Dropbox",
+  "short_name": "Save2Dropbox",
+  "description": "Remotely upload files or direct links to your Dropbox account quickly and securely.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a73e8",
+  "icons": [
+    {
+      "src": "https://save2dropbox.github.io/dropbox.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://save2dropbox.github.io/dropbox.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
