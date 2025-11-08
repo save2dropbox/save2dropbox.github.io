@@ -7,7 +7,10 @@ const urlsToCache = [
   '/favicon.ico',
   '/manifest.json',
   '/style.css',
-  '/all.min.css'
+  '/all.min.css',
+  '/webfonts/fa-brands-400.woff2',
+  '/webfonts/fa-brands-400.ttf',
+  '/404.html'
 ];
 
 self.addEventListener('install', event => {
