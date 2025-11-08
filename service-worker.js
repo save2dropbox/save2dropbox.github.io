@@ -14,16 +14,16 @@ const urlsToCache = [
   '/404.html'
 ];
 
-// ✅ تثبيت الكاش الأساسي
+// ✅ Install primary cache
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
   );
-  self.skipWaiting(); // لتفعيل التحديث فوراً
+  self.skipWaiting(); // To activate the update immediatelyاً
 });
 
-// ✅ تفعيل النسخة الجديدة من الكاش وإزالة القديمة
+// ✅ Activate the new version of the cache and remove the old one.
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys => {
@@ -36,15 +36,15 @@ self.addEventListener('activate', event => {
   self.clients.claim();
 });
 
-// ✅ التعامل مع الطلبات — دعم Offline + تحديث تلقائي
+// ✅ Order Handling — Offline Support + Automatic Updates
 self.addEventListener('fetch', event => {
   if (event.request.mode === 'navigate') {
-    // إذا المستخدم بدون إنترنت، عرض صفحة offline.html
+    // إIf the user is offline, view the page offline.html
     event.respondWith(
       fetch(event.request).catch(() => caches.match('/offline.html'))
     );
   } else {
-    // تحميل من الكاش أولاً ثم التحديث بالخلفية
+   // Download from cache first, then update in the background
     event.respondWith(
       caches.match(event.request)
         .then(response => {
