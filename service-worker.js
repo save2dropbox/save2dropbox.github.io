@@ -2,6 +2,7 @@ const CACHE_NAME = 'save2dropbox-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
+  '/offline.html',
   '/save2.html',
   '/dropbox.png',
   '/favicon.ico',
