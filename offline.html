@@ -6,51 +6,131 @@
 <title>Offline - Save2Dropbox</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg, #e3f2fd 0%, #f9fbfc 100%);
     color: #333;
-    text-align: center;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    overflow: hidden;
   }
-  .box {
-    background: white;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    max-width: 400px;
+
+  .cloud {
+    position: absolute;
+    top: 20%;
+    left: -200px;
+    width: 150px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 60px 0 0 20px #fff, 120px 10px 0 0 #fff, 180px 0 0 15px #fff;
+    animation: cloudMove 35s linear infinite;
+    opacity: 0.9;
   }
+
+  @keyframes cloudMove {
+    from { left: -250px; }
+    to { left: 110%; }
+  }
+
+  .wifi {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .wifi span {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #1a73e8;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: blink 2s infinite;
+  }
+
+  .wifi span:nth-child(2),
+  .wifi span:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #1a73e8;
+    border-color: #1a73e8 transparent transparent transparent;
+    border-radius: 50%;
+    top: -10px;
+    left: calc(50% - 25px);
+    animation: pulse 2s infinite ease-in-out;
+  }
+
+  .wifi span:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    top: -25px;
+    left: calc(50% - 40px);
+    animation-delay: 1s;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.1; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes blink {
+    0%, 100% { background: #1a73e8; }
+    50% { background: #90caf9; }
+  }
+
   h1 {
     color: #1a73e8;
+    font-size: 28px;
     margin-bottom: 10px;
   }
+
   p {
     font-size: 16px;
-    margin-bottom: 20px;
+    color: #444;
+    margin-bottom: 25px;
+    text-align: center;
+    max-width: 360px;
+    line-height: 1.5;
   }
+
   button {
     background: #1a73e8;
-    color: white;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 24px;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s, transform 0.3s;
   }
+
   button:hover {
     background: #155ab6;
+    transform: scale(1.05);
   }
 </style>
 </head>
 <body>
-  <div class="box">
-    <h1>You're Offline</h1>
-    <p>It looks like you’re not connected to the Internet.<br>Don’t worry — you can still use Save2Dropbox once you’re back online.</p>
-    <button onclick="window.location.reload()">Try Again</button>
+  <div class="cloud"></div>
+
+  <div class="wifi">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+
+  <h1>You're Offline</h1>
+  <p>It seems you’ve lost your connection.<br>
+     Don’t worry — once you’re back online, Save2Dropbox will resume perfectly.</p>
+  <button onclick="window.location.reload()">Try Again</button>
 </body>
 </html>
