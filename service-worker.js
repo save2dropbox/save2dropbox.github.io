@@ -2,8 +2,12 @@ const CACHE_NAME = 'save2dropbox-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
+  '/save2.html',
   '/dropbox.png',
-  '/manifest.json'
+  '/favicon.ico',
+  '/manifest.json',
+  '/style.css',
+  '/all.min.css'
 ];
 
 self.addEventListener('install', event => {
