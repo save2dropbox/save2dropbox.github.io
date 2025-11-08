@@ -39,7 +39,7 @@ self.addEventListener('activate', event => {
 // ✅ Order Handling — Offline Support + Automatic Updates
 self.addEventListener('fetch', event => {
   if (event.request.mode === 'navigate') {
-    // إIf the user is offline, view the page offline.html
+    //If the user is offline, view the page offline.html
     event.respondWith(
       fetch(event.request).catch(() => caches.match('/offline.html'))
     );
