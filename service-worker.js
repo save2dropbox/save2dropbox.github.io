@@ -3,6 +3,7 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/offline.html',
+  '/save.js',
   '/save2.html',
   '/dropbox.png',
   '/favicon.ico',
