@@ -9,6 +9,6 @@ just paste a link and save it to Dropbox instantly.
 
  Demo Website: https://save2dropbox.github.io/
 
-[preview image:]([docs/CONTRIBUTING.md](https://save2dropbox.github.io/screenshot.png))
+[screenshot image:](https://save2dropbox.github.io/screenshot.png)
 
 ![screenshot](https://save2dropbox.github.io/screenshot.png)
