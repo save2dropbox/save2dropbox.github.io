@@ -8,4 +8,7 @@ just paste a link and save it to Dropbox instantly.
 ### Upload to Dropbox From URL
 
  Demo Website: https://save2dropbox.github.io/
- ![preview image](https://save2dropbox.github.io/screenshot.png)
+
+[preview image:]([docs/CONTRIBUTING.md](https://save2dropbox.github.io/screenshot.png))
+
+![screenshot](https://save2dropbox.github.io/screenshot.png)
