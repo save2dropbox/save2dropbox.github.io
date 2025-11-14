@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /index.html
+Allow: /url2dropbox.html
 Allow: /save2.html
 Allow: /dropbox.png
 Allow: /sitemap.xml
